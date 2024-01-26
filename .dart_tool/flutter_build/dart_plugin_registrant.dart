@@ -32,6 +32,7 @@ import 'package:path_provider_linux/path_provider_linux.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences_linux/shared_preferences_linux.dart';
 import 'package:url_launcher_linux/url_launcher_linux.dart';
+import 'package:flutter_image_compress_macos/flutter_image_compress_macos.dart';
 import 'package:geolocator_apple/geolocator_apple.dart';
 import 'package:image_picker_macos/image_picker_macos.dart';
 import 'package:path_provider_foundation/path_provider_foundation.dart';
@@ -313,6 +314,16 @@ class _PluginRegistrant {
       }
 
     } else if (Platform.isMacOS) {
+      try {
+        FlutterImageCompressMacos.registerWith();
+      } catch (err) {
+        print(
+          '`flutter_image_compress_macos` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+        rethrow;
+      }
+
       try {
         GeolocatorApple.registerWith();
       } catch (err) {
