@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 
 class ErrorPageAsis extends StatelessWidget {
   const ErrorPageAsis();
-//okereeee
-//edwin
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
