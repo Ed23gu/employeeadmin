@@ -4,11 +4,6 @@ import 'package:employee_attendance/screens/splash_screen.dart';
 import 'package:employee_attendance/utils/check_internet_connection.dart';
 import 'package:flutter/material.dart';
 
-//ed
-//oficnia
-//casas
-//ssss
-//fsdfsdsd
 class ErrorPageAsis extends StatelessWidget {
   const ErrorPageAsis();
 
